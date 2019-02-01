@@ -7,7 +7,7 @@ set -e
 # debug
 # set -x
 
-echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
+/sbin/sysctl fs.inotify.max_user_watches=524288
 
 # parse and derive params
 BUILD_DIR=$1
